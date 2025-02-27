@@ -1,5 +1,10 @@
 package edu.iu.lukemeng.primesservice.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Table
+@Entity
 public class Customer {
     private String username;
     private String password;
@@ -7,6 +12,10 @@ public class Customer {
     public Customer(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public Customer() {
+
     }
 
     public String getUsername() { return username; }
